@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "Mycontact",
+    "crispy_forms",
+    "sendemail"
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -116,3 +119,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL='Ghaithbalti20@gmail.com'
+EMAIL_HOST='smtp-relay.sendinblue.com'
+EMAIL_HOST_USER='Ghaithbalti20@gmail.com'
+EMAIL_HOST_PASSWORD='PQ17LqCxXRnTpZgj'
+EMAIL_PORT=587
